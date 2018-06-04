@@ -1,0 +1,70 @@
+<?xml version="1.0"?>
+<config>
+<modules>
+    <Stuntcoders_FbProductFeed>
+        <version>0.1.1</version>
+    </Stuntcoders_FbProductFeed>
+</modules>
+<global>
+    <models>
+        <stuntcoders_fbproductfeed>
+            <class>Stuntcoders_FbProductFeed_Model</class>
+            <resourceModel>stuntcoders_fbproductfeed_resource</resourceModel>
+        </stuntcoders_fbproductfeed>
+        <stuntcoders_fbproductfeed_resource>
+            <class>Stuntcoders_FbProductFeed_Model_Resource</class>
+            <entities>
+                <feed>
+                    <table>stuntcoders_fbproductfeed_feed</table>
+                </feed>
+            </entities>
+        </stuntcoders_fbproductfeed_resource>
+    </models>
+    <blocks>
+        <stuntcoders_fbproductfeed>
+            <class>Stuntcoders_FbProductFeed_Block</class>
+        </stuntcoders_fbproductfeed>
+    </blocks>
+    <helpers>
+        <stuntcoders_fbproductfeed>
+            <class>Stuntcoders_FbProductFeed_Helper</class>
+        </stuntcoders_fbproductfeed>
+    </helpers>
+    <resources>
+        <stuntcoders_fbproductfeed_setup>
+            <setup>
+                <module>Stuntcoders_FbProductFeed</module>
+            </setup>
+        </stuntcoders_fbproductfeed_setup>
+    </resources>
+</global>
+<adminhtml>
+    <layout>
+        <updates>
+            <stuntcoders_fbproductfeed>
+                <file>stuntcoders/fbproductfeed.xml</file>
+            </stuntcoders_fbproductfeed>
+        </updates>
+    </layout>
+</adminhtml>
+<admin>
+    <routers>
+        <adminhtml>
+            <args>
+                <modules>
+                    <Stuntcoders_FbProductFeed before="Mage_Adminhtml">Stuntcoders_FbProductFeed_Adminhtml</Stuntcoders_FbProductFeed>
+                </modules>
+            </args>
+        </adminhtml>
+    </routers>
+</admin>
+    <crontab>
+        <jobs>
+            <stuntcoders_fbproductfeed>
+                <run>
+                    <model>stuntcoders_fbproductfeed/observer::setFeeds</model>
+                </run>
+            </stuntcoders_fbproductfeed>
+        </jobs>
+    </crontab>
+</config>

@@ -1,0 +1,49 @@
+<config>
+    <tabs>
+        <stuntcoders_fbproductfeed translate="label" module="stuntcoders_fbproductfeed">
+            <label>Facebook Product Feed</label>
+            <sort_order>99999</sort_order>
+        </stuntcoders_fbproductfeed>
+    </tabs>
+    <sections>
+        <stuntcoders_fbproductfeed translate="label" module="stuntcoders_fbproductfeed">
+            <label>Facebook Product Feed</label>
+            <tab>stuntcoders</tab>
+            <frontend_type>text</frontend_type>
+            <sort_order>1000</sort_order>
+            <show_in_default>1</show_in_default>
+            <show_in_website>1</show_in_website>
+            <show_in_store>1</show_in_store>
+            <groups>
+                <general translate="label">
+                    <label>Facebook Product Feed</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>1</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <frequency translate="label">
+                            <label>Frequency</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_cron_frequency</source_model>
+                            <backend_model>stuntcoders_fbproductfeed/system_config_backend_cron</backend_model>
+                            <sort_order>1</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </frequency>
+                        <time translate="label">
+                            <label>Start Time</label>
+                            <frontend_type>time</frontend_type>
+                            <sort_order>2</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </time>
+                    </fields>
+                </general>
+            </groups>
+        </stuntcoders_fbproductfeed>
+    </sections>
+</config>

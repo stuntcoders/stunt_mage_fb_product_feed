@@ -1,0 +1,8 @@
+<config>
+    <modules>
+        <Stuntcoders_FbProductFeed>
+            <active>true</active>
+            <codePool>local</codePool>
+        </Stuntcoders_FbProductFeed>
+    </modules>
+</config>

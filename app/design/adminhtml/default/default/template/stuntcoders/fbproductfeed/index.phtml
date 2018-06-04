@@ -1,0 +1,15 @@
+<div class="content-header">
+    <table cellspacing="0">
+        <tr>
+            <td>
+                <h3 class="icon-head head-blog">
+                    <?php echo Mage::helper('stuntcoders_fbproductfeed')->__('Facebook Product Feeds'); ?>
+                </h3>
+            </td>
+            <td class="a-right">
+                <?php echo $this->getChildHtml('fbproductfeed.addnew'); ?>
+            </td>
+        </tr>
+    </table>
+</div>
+<?php echo $this->getLayout()->createBlock('stuntcoders_fbproductfeed/index_grid')->toHtml(); ?>

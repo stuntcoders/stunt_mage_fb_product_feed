@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<layout version="0.1.0">
+    <adminhtml_fbproductfeed_index>
+        <reference name="content">
+            <block type="stuntcoders_fbproductfeed/index" name="stuntcoders.fbproductfeed.index">
+                <block type="stuntcoders_fbproductfeed/index_grid" name="stuntcoders.fbproductfeed.index.grid" />
+            </block>
+        </reference>
+    </adminhtml_fbproductfeed_index>
+    <adminhtml_fbproductfeed_new>
+        <reference name="content">
+            <block type="stuntcoders_fbproductfeed/addForm" name="stuntcoders.import.form" template="stuntcoders/fbproductfeed/add.phtml">
+                <block type="stuntcoders_fbproductfeed/add_form" name="stuntcoders.fbproductfeed.add" />
+            </block>
+        </reference>
+    </adminhtml_fbproductfeed_new>
+</layout>
