@@ -2,7 +2,6 @@
 
 $this->startSetup();
 
-$this->getConnection()->dropTable($installer->getTable('stuntcoders_fbproductfeed/feed'));
 $table = $this->getConnection()
     ->newTable($this->getTable('stuntcoders_fbproductfeed/feed'))
     ->addColumn('id', Varien_Db_Ddl_Table::TYPE_INTEGER, null, array(
