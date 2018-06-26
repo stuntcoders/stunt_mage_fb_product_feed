@@ -17,6 +17,7 @@ class Stuntcoders_FbProductFeed_Block_Add_Form extends Mage_Adminhtml_Block_Widg
         ));
 
         $data = array();
+        
         if (Mage::registry('stuntcoders_fbproduct_feed')) {
             $data = Mage::registry('stuntcoders_fbproduct_feed')->getData();
         }
@@ -59,6 +60,7 @@ class Stuntcoders_FbProductFeed_Block_Add_Form extends Mage_Adminhtml_Block_Widg
         $form->setUseContainer(true);
         $this->setForm($form);
         $form->setValues($data);
+
         return parent::_prepareForm();
     }
 }
