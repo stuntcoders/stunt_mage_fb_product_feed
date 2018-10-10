@@ -61,6 +61,6 @@ class Stuntcoders_FbProductFeed_Block_Index_Grid extends Mage_Adminhtml_Block_Wi
      */
     public function getRowUrl($row)
     {
-        return $this->getUrl('*/*/new', array('id' => $row->getId()));
+        return $this->getUrl('*/*/add', array('id' => $row->getId()));
     }
 }

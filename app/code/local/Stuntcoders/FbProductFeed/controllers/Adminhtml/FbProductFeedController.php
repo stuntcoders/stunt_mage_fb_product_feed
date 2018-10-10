@@ -8,15 +8,16 @@ class Stuntcoders_FbProductFeed_Adminhtml_FbProductFeedController extends Mage_A
         $this->renderLayout();
     }
 
-    public function newAction()
+    public function addAction()
     {
-        if ($feedId = $this->getRequest()->getParam('id')) {
+        $feedId = $this->getRequest()->getParam('id');
+        if ($feedId) {
             $feed = Mage::getModel('stuntcoders_fbproductfeed/feed')->load($feedId);
             Mage::register('stuntcoders_fbproduct_feed', $feed);
         }
 
         $this->loadLayout();
-        $this->renderLayout();
+        return $this->renderLayout();
     }
 
     public function saveAction()
@@ -38,11 +39,13 @@ class Stuntcoders_FbProductFeed_Adminhtml_FbProductFeedController extends Mage_A
             foreach ($errors as $error) {
                 Mage::getSingleton('core/session')->addError($error);
             }
-        } else {
-            $feed->save();
+
+            return $this->_redirect('*/*/add');
         }
-        $this->generatecsvAction();
-        return $this->_redirect('*/*/new', array('id' => $feed->getId()));
+
+        $feed->save();
+
+        return $this->_redirect('*/*/index');
     }
 
     /**

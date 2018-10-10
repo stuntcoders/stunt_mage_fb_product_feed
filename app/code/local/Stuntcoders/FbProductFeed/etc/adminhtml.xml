@@ -1,33 +1,14 @@
 <?xml version="1.0"?>
 <config>
-<menu>
-    <catalog translate="title" module="stuntcoders_fbproductfeed">
-        <children>
-            <fbproductfeed translate="title" module="stuntcoders_fbproductfeed">
-                <title>Facebook Product Feed</title>
-                <action>adminhtml/fbproductfeed/index</action>
-                <sort_order>250</sort_order>
-            </fbproductfeed>
-        </children>
-    </catalog>
-</menu>
-    <acl>
-        <resources>
-            <admin>
-                <children>
-                    <system>
-                        <children>
-                            <config>
-                                <children>
-                                    <stuntcoders_fbproductfeed>
-                                        <title>Facebook Product Feed</title>
-                                    </stuntcoders_fbproductfeed>
-                                </children>
-                            </config>
-                        </children>
-                    </system>
-                </children>
-            </admin>
-        </resources>
-    </acl>
+    <menu>
+        <catalog translate="title" module="stuntcoders_fbproductfeed">
+            <children>
+                <fbproductfeed translate="title" module="stuntcoders_fbproductfeed">
+                    <title>Facebook Product Feed</title>
+                    <action>adminhtml/fbproductfeed/index</action>
+                    <sort_order>350</sort_order>
+                </fbproductfeed>
+            </children>
+        </catalog>
+    </menu>
 </config>

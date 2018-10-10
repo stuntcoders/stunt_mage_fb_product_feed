@@ -2,11 +2,15 @@
 
 class Stuntcoders_FbProductFeed_Block_Index extends Mage_Adminhtml_Block_Widget_Grid_Container
 {
-    public function __construct()
+    protected function _prepareLayout()
     {
-        $this->_blockGroup = 'stuntcoders_fbproductfeed';
-        $this->_controller = 'index';
-        $this->_headerText = $this->__('Facebook Product Feed');
-        return parent::__construct();
+        $addButton = $this->getLayout()->createBlock('adminhtml/widget_button');
+        $addButton ->setData(array(
+            'label' => Mage::helper('stuntcoders_fbproductfeed')->__('Add New Feed'),
+            'onclick' => "setLocation('" . $this->getUrl('*/*/add') . "')",
+            'class' => 'add'
+        ));
+
+        $this->setChild('fbproductfeed.addnew', $addButton);
     }
 }
